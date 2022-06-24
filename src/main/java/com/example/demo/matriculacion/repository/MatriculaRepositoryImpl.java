@@ -8,9 +8,9 @@ import com.example.demo.matriculacion.modelo.Matricula;
 public class MatriculaRepositoryImpl implements IMatriculaRepository {
 
 	@Override
-	public void insertar(Matricula matricula) {
+	public void crear(Matricula matricula) {
 		// TODO Auto-generated method stub
-		System.out.println("Se ha insertado la matricula: "+ matricula);
+		System.out.println("Se crea la matricula: " + matricula);
 	}
 
 }

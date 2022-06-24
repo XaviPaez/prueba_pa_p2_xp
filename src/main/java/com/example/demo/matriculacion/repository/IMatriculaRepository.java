@@ -4,7 +4,6 @@ import com.example.demo.matriculacion.modelo.Matricula;
 
 public interface IMatriculaRepository {
 
-	public void insertar(Matricula matricula);
-	
+	public void crear(Matricula matricula);
 	
 }

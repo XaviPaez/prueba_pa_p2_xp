@@ -1,9 +1,8 @@
 package com.example.demo.matriculacion.service;
 
-import com.example.demo.matriculacion.modelo.Matricula;
+import java.math.BigDecimal;
 
 public interface IMatriculaService {
 
-	public void ingresarMatricula(Matricula matricula);
-	
+	public BigDecimal calcular(BigDecimal precio);
 }

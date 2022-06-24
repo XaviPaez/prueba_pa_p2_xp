@@ -1,5 +1,7 @@
 package com.example.demo.matriculacion.repository;
 
+import java.math.BigDecimal;
+
 import org.springframework.stereotype.Repository;
 
 import com.example.demo.matriculacion.modelo.Vehiculo;
@@ -8,32 +10,33 @@ import com.example.demo.matriculacion.modelo.Vehiculo;
 public class VehiculoRepositoryImpl implements IVehiculoRepository {
 
 	@Override
-	public void insertar(Vehiculo v) {
+	public void insertar(Vehiculo vehiculo) {
 		// TODO Auto-generated method stub
-		System.out.println("Se ha insertado el vehiculo:" + v);
+		System.out.println("Se inserta el vehiculo: "+ vehiculo);
 	}
 
 	@Override
-	public Vehiculo buscar(String placa) {
+	public void actualizar(Vehiculo vehiculo) {
 		// TODO Auto-generated method stub
-		System.out.println("Se ha buscado el vehiculo"+ placa);
-		Vehiculo vehiculo = new Vehiculo();
-		vehiculo.setPlaca(placa);
-		vehiculo.setTipo("L");
-		return vehiculo;
-
-	}
-
-	@Override
-	public void actualizar(Vehiculo v) {
-		// TODO Auto-generated method stub
-		System.out.println("Se ha actualizado el vehiculo: " + v);
+		System.out.println("Se actualiza el vehiculo: "+ vehiculo);
 	}
 
 	@Override
 	public void eliminar(String placa) {
 		// TODO Auto-generated method stub
-		System.out.println("Se ha eliminado el vehiculo: " + placa);
+		System.out.println("Se elimina el vehiculo: "+ placa);
+	}
+
+	@Override
+	public Vehiculo buscar(String placa) {
+		// TODO Auto-generated method stub
+		System.out.println("Se busca el vehiculo: "+ placa);
+		Vehiculo vehiculo=new Vehiculo();
+		vehiculo.setMarca("Chevrolet");
+		vehiculo.setPlaca("PEA-1231");
+		vehiculo.setPrecio(new BigDecimal(9000));
+		vehiculo.setTipo("P");
+		return vehiculo;
 	}
 
 }
